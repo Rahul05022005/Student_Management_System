@@ -1,4 +1,4 @@
-// Load existing data from localStorage
+
 document.addEventListener("DOMContentLoaded", showStudents);
 
 // Add student
@@ -24,7 +24,7 @@ document.getElementById("studentForm").addEventListener("submit", function (e) {
   showStudents();
 });
 
-// Display student data
+// Display student 
 function showStudents() {
   let students = JSON.parse(localStorage.getItem("students")) || [];
   let tableBody = document.getElementById("studentTableBody");
@@ -48,3 +48,4 @@ function deleteStudent(index) {
   localStorage.setItem("students", JSON.stringify(students));
   showStudents();
 }
+
